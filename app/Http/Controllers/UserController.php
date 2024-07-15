@@ -54,6 +54,9 @@ class UserController extends Controller
             session()->put('email',$user->email);
             // return dd(session());
             return redirect()->route('home');
+        }else{
+            echo "Please Enter Valid Email & Password";
+            
         }
 
     }
