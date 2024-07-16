@@ -28,4 +28,9 @@ Route::controller(UserController::class)->group(function(){
 
     Route::get('/signout','signOut')->name('signout');
 
+    Route::get('/editprofile','editProfile')->name('editProfile');
+    Route::get('/updateprofilepage','updateprofilepage')->name('updateprofilepage');
+
+    Route::post('updateprofile','updateprofile')->name('updateprofile');
+
 });

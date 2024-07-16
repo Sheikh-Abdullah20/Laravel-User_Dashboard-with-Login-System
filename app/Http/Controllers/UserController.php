@@ -115,6 +115,46 @@ class UserController extends Controller
 
     }
 
+
+    
+    public function editprofile(){
+        $email = session()->get('email');
+        $user = User::where("email",$email)->first();
+        // if($user){
+        //     $user->password = crypt::decryptstring($user->password);
+        // }
+        // return $user;
+        return view('editprofile', ['user'=>$user]);
+    }
+
+
+    
+
+    public function updateprofilepage(){
+
+        $email = session()->get('email');
+        $user = User::where("email",$email)->first();
+        return view('updateprofile',['user'=> $user]);
+    }
+
+
+    public function updateprofile(Request $req){
+
+        $email = session()->get('email');
+        $user = User::where('email', $email)->update([
+            'name' => $req->name,
+            'email' => $req->email,
+            'password' => $req->password
+        ]);
+        // return $user;
+
+        if($user){
+            return redirect()->route('editProfile')->with('success', 'Profile updated successfully');
+        }
+        return redirect()->route('editProfile');
+    }
+
+    
     public function signOut(){
         session()->flush();
         return redirect()->route('signin');

@@ -838,7 +838,7 @@
                                 </div>
                             </li>
                             <li><a class="dropdown-item d-flex" href="#"><i class="bx bx-user-circle fs-18 me-2 op-7"></i>Profile</a></li>
-                            <li><a class="dropdown-item d-flex" href="#"><i class="bx bx-cog fs-18 me-2 op-7"></i>Edit Profile </a></li>
+                            <li><a class="dropdown-item d-flex" href="{{route('editProfile')}}"><i class="bx bx-cog fs-18 me-2 op-7"></i>Edit Profile </a></li>
                             <li><a class="dropdown-item d-flex border-block-end" href="#"><i class="bx bxs-inbox fs-18 me-2 op-7"></i>Inbox</a></li>
                             <li><a class="dropdown-item d-flex" href="#"><i class="bx bx-envelope fs-18 me-2 op-7"></i>Messages</a></li>
                             <li><a class="dropdown-item d-flex border-block-end" href="#"><i class="bx bx-slider-alt fs-18 me-2 op-7"></i>Account Settings</a></li>
